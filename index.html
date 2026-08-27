@@ -1,0 +1,2844 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#05060a">
+<title>Jose Natanael — Built By Experience</title>
+<meta name="description" content="Portofolio profesional Jose Natanael — Tenant Relations, Property Operations, Administration, Customer Service & Sales dengan pengalaman lintas negara Asia Tenggara.">
+<meta property="og:title" content="Jose Natanael — Built By Experience">
+<meta property="og:description" content="Professional muda dengan pengalaman Tenant Relations, Property Operations, Administration, Customer Service dan Sales lintas negara.">
+<meta property="og:image" content="images/hero-natan.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2305060a'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='900' fill='%23ff765f' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+
+<style>
+/* ============================================
+   VARIABLES
+   ============================================ */
+:root {
+  --bg: #05060a;
+  --bg-light: #0b0e18;
+  --panel: rgba(12, 16, 28, 0.72);
+  --panel2: rgba(255, 255, 255, 0.045);
+  --text: #f0f3fa;
+  --muted: #8f98aa;
+  --line: rgba(255, 255, 255, 0.08);
+  --orange: #ff765f;
+  --peach: #ffb38f;
+  --cyan: #64dfff;
+  --green: #62e5a1;
+  --purple: #9d8cff;
+  --radius: 28px;
+  --radius-sm: 16px;
+  --shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+::selection {
+  background: rgba(255, 118, 95, 0.3);
+  color: #fff;
+}
+
+/* ============================================
+   BACKGROUND LAYERS
+   ============================================ */
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+}
+
+.bg-layer .gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(255, 118, 95, 0.12), transparent 40%),
+    radial-gradient(ellipse at 85% 80%, rgba(100, 223, 255, 0.08), transparent 35%),
+    radial-gradient(ellipse at 50% 50%, rgba(157, 140, 255, 0.06), transparent 45%),
+    #05060a;
+}
+
+.bg-layer .grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at center, #000 30%, transparent 70%);
+}
+
+.bg-layer .noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.8'/%3E%3C/svg%3E");
+}
+
+/* Ambient blobs */
+.bg-layer .blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: blobFloat 20s ease-in-out infinite alternate;
+}
+
+.bg-layer .blob--1 {
+  width: 500px;
+  height: 500px;
+  top: -10%;
+  right: -5%;
+  background: rgba(255, 118, 95, 0.08);
+  animation-duration: 25s;
+}
+
+.bg-layer .blob--2 {
+  width: 400px;
+  height: 400px;
+  bottom: 10%;
+  left: -5%;
+  background: rgba(100, 223, 255, 0.06);
+  animation-duration: 30s;
+  animation-delay: -5s;
+}
+
+.bg-layer .blob--3 {
+  width: 300px;
+  height: 300px;
+  top: 40%;
+  left: 50%;
+  background: rgba(157, 140, 255, 0.05);
+  animation-duration: 22s;
+  animation-delay: -10s;
+}
+
+@keyframes blobFloat {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(40px, -30px) scale(1.1); }
+  66% { transform: translate(-20px, 40px) scale(0.9); }
+  100% { transform: translate(30px, -20px) scale(1.05); }
+}
+
+/* ============================================
+   CURSOR
+   ============================================ */
+.cursor-glow {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  pointer-events: none;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 118, 95, 0.07), transparent 65%);
+  filter: blur(12px);
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+  will-change: transform, left, top;
+}
+
+.cursor-glow.hover {
+  width: 400px;
+  height: 400px;
+  opacity: 0.6;
+}
+
+@media (pointer: coarse) {
+  .cursor-glow { display: none; }
+}
+
+/* ============================================
+   CONTAINER
+   ============================================ */
+.container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1160px, calc(100% - 32px));
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(7, 9, 15, 0.6);
+  backdrop-filter: blur(24px) saturate(1.2);
+  -webkit-backdrop-filter: blur(24px) saturate(1.2);
+  z-index: 50;
+  transition: background 0.4s, box-shadow 0.4s, border-color 0.4s;
+}
+
+nav.scrolled {
+  background: rgba(7, 9, 15, 0.92);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+nav .logo {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav .logo span {
+  color: var(--orange);
+}
+
+.nav-links {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.nav-links a {
+  position: relative;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: color 0.3s, background 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 2px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+.nav-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.nav-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 140px 0 80px;
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-content .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px 8px 12px;
+  border: 1px solid rgba(98, 229, 161, 0.2);
+  border-radius: 100px;
+  background: rgba(98, 229, 161, 0.05);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #b7f4d5;
+}
+
+.hero-content .badge .dot {
+  width: 7px;
+  height: 7px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(98, 229, 161, 0.4);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.hero-content h1 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: clamp(56px, 10vw, 130px);
+  line-height: 0.85;
+  letter-spacing: -6px;
+  margin: 28px 0 20px;
+  font-weight: 700;
+}
+
+.hero-content h1 .line2 {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.5);
+  text-stroke: 1.5px rgba(255, 255, 255, 0.5);
+}
+
+.hero-content h1 .accent {
+  color: var(--orange);
+  text-shadow: 0 0 60px rgba(255, 118, 95, 0.15);
+}
+
+.hero-content .sub {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.hero-content .sub b {
+  color: #d0d8e5;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--orange), #e8654f);
+  border: none;
+  color: #1a0c08;
+  box-shadow: 0 12px 40px rgba(255, 118, 95, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(255, 118, 95, 0.3);
+  background: linear-gradient(135deg, #ff8a75, #f05a42);
+  border-color: transparent;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 40px;
+  margin-top: 44px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.hero-meta .meta-item b {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.hero-meta .meta-item span {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-top: 2px;
+}
+
+/* Hero 3D Scene */
+.hero-scene {
+  position: relative;
+  height: 620px;
+  perspective: 1200px;
+}
+
+.hero-scene .orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(3px);
+  pointer-events: none;
+}
+
+.hero-scene .orb--1 {
+  width: 320px;
+  height: 320px;
+  top: 10px;
+  right: 0;
+  background: radial-gradient(circle at 30% 25%, #ffd9cb, transparent 20%),
+              radial-gradient(circle at 60% 60%, #c74e42, transparent 50%),
+              #52211d;
+  box-shadow: 0 0 140px rgba(255, 118, 95, 0.15);
+}
+
+.hero-scene .orb--2 {
+  width: 180px;
+  height: 180px;
+  bottom: 30px;
+  left: 10px;
+  background: radial-gradient(circle at 30% 30%, #c4f7ff, transparent 18%),
+              #11607a;
+  box-shadow: 0 0 120px rgba(100, 223, 255, 0.12);
+}
+
+.hero-scene .profile-card {
+  position: absolute;
+  inset: 50px 40px 40px 50px;
+  border-radius: 34px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(145deg, #1c2535, #080b12);
+  transform: rotateY(-8deg) rotateX(4deg);
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6), inset 0 1px rgba(255, 255, 255, 0.08);
+  will-change: transform;
+}
+
+.hero-scene .profile-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.06), transparent 50%);
+  animation: scan-shine 8s ease-in-out infinite;
+}
+
+@keyframes scan-shine {
+  0%, 30% { transform: translateX(-100%) skewX(-20deg); }
+  60%, 100% { transform: translateX(100%) skewX(-20deg); }
+}
+
+.hero-scene .profile-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  filter: saturate(0.95) contrast(1.05);
+}
+
+.hero-scene .profile-card .overlay {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 30px 28px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85) 70%);
+  z-index: 3;
+}
+
+.hero-scene .profile-card .overlay small {
+  color: var(--orange);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-scene .profile-card .overlay h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  margin-top: 4px;
+  letter-spacing: -0.5px;
+}
+
+.hero-scene .float-card {
+  position: absolute;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(8, 11, 18, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  animation: float-card 6s ease-in-out infinite alternate;
+}
+
+.hero-scene .float-card b {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero-scene .float-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
+  margin-top: 3px;
+}
+
+.hero-scene .float-card--1 {
+  top: 20px;
+  left: -5px;
+  animation-delay: -1s;
+}
+
+.hero-scene .float-card--2 {
+  bottom: 10px;
+  right: -10px;
+  animation-delay: -3s;
+}
+
+.hero-scene .float-card--3 {
+  bottom: 80px;
+  left: -10px;
+  animation-delay: -5s;
+}
+
+@keyframes float-card {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-12px); }
+}
+
+/* ============================================
+   SECTION SHARED
+   ============================================ */
+section {
+  padding: 110px 0;
+  position: relative;
+}
+
+.section-eyebrow {
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(36px, 5.5vw, 68px);
+  letter-spacing: -3px;
+  line-height: 1;
+  margin: 16px 0 18px;
+}
+
+.section-title span {
+  color: var(--orange);
+}
+
+.section-lead {
+  max-width: 640px;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* ============================================
+   GLASS CARD
+   ============================================ */
+.glass {
+  background: linear-gradient(145deg, rgba(20, 26, 42, 0.7), rgba(9, 12, 19, 0.6));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--shadow);
+}
+
+/* ============================================
+   ABOUT
+   ============================================ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+  margin-top: 44px;
+}
+
+.about-text {
+  padding: 38px 40px;
+}
+
+.about-text p {
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+.about-text p + p {
+  margin-top: 16px;
+}
+
+.about-text b {
+  color: #eaeef5;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.about-stats-grid .stat-card {
+  padding: 28px 24px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: default;
+}
+
+.about-stats-grid .stat-card:hover {
+  transform: translateY(-6px) rotateX(2deg);
+  border-color: rgba(255, 118, 95, 0.2);
+}
+
+.about-stats-grid .stat-card strong {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 40px;
+  color: var(--orange);
+}
+
+.about-stats-grid .stat-card span {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.about-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.about-gallery .gallery-item {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  border: 1px solid var(--line);
+  cursor: zoom-in;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.about-gallery .gallery-item:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.about-gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s;
+}
+
+.about-gallery .gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.about-gallery .gallery-item .overlay {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 18px 16px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+}
+
+.about-gallery .gallery-item .overlay small {
+  display: block;
+  color: var(--orange);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.about-gallery .gallery-item .overlay span {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  color: #e0e5ee;
+}
+
+/* ============================================
+   EXPERIENCE / TIMELINE
+   ============================================ */
+.timeline {
+  position: relative;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 156px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--orange), var(--cyan), transparent);
+  opacity: 0.4;
+}
+
+.timeline .job {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 60px;
+  margin-bottom: 24px;
+}
+
+.timeline .job .date {
+  text-align: right;
+  color: #ffbd82;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding-top: 28px;
+}
+
+.timeline .job .job-card {
+  position: relative;
+  padding: 28px 32px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.timeline .job .job-card:hover {
+  transform: translateX(6px);
+  border-color: rgba(255, 118, 95, 0.25);
+}
+
+.timeline .job .job-card::before {
+  content: '';
+  position: absolute;
+  left: -69px;
+  top: 32px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 3px solid var(--orange);
+  box-shadow: 0 0 24px rgba(255, 118, 95, 0.35);
+  z-index: 2;
+}
+
+.timeline .job .job-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.timeline .job .job-card .company {
+  color: var(--orange);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.timeline .job .job-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 14px;
+}
+
+.timeline .job .job-card .job-photos {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.timeline .job .job-card .job-photos .photo {
+  position: relative;
+  width: 180px;
+  height: 130px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  cursor: zoom-in;
+  flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.timeline .job .job-card .job-photos .photo:hover {
+  transform: scale(1.02);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.timeline .job .job-card .job-photos .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.timeline .job .job-card .job-photos .photo .tag {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  padding: 4px 10px;
+  background: rgba(5, 6, 10, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 8px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #ffd9cb;
+  pointer-events: none;
+}
+
+/* ============================================
+   SKILLS
+   ============================================ */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.skills-grid .skill {
+  padding: 30px 28px;
+  min-height: 200px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: default;
+}
+
+.skills-grid .skill:hover {
+  transform: translateY(-8px) rotateX(2deg) rotateY(-1deg);
+  border-color: rgba(255, 118, 95, 0.2);
+}
+
+.skills-grid .skill .number {
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.skills-grid .skill h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+.skills-grid .skill p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 8px;
+}
+
+/* ============================================
+   INTERNATIONAL
+   ============================================ */
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.countries-grid .country {
+  text-align: center;
+  padding: 28px 12px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: default;
+}
+
+.countries-grid .country:hover {
+  transform: translateY(-8px) scale(1.03);
+  border-color: rgba(255, 118, 95, 0.2);
+}
+
+.countries-grid .country .flag {
+  font-size: 34px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.countries-grid .country b {
+  display: block;
+  font-size: 13px;
+}
+
+.countries-grid .country span {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
+  margin-top: 4px;
+}
+
+/* ============================================
+   RESUME
+   ============================================ */
+.resume-download {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.resume-panel {
+  padding: 40px;
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 44px;
+}
+
+.resume-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resume-side .photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, #1c2535, #080b12);
+}
+
+.resume-side .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.resume-side .name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 26px;
+  letter-spacing: -0.5px;
+}
+
+.resume-side .role {
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.resume-side .contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.resume-side .contact-list a,
+.resume-side .contact-list div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.resume-side .contact-list b {
+  color: #d7dbe4;
+  font-weight: 500;
+}
+
+.resume-side .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.resume-side .tags .tag {
+  padding: 6px 14px;
+  border-radius: 100px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 10px;
+  font-weight: 700;
+  color: #c7cedb;
+}
+
+.resume-main .block {
+  margin-bottom: 28px;
+}
+
+.resume-main .block:last-child {
+  margin-bottom: 0;
+}
+
+.resume-main .block h4 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #aab2c2;
+  margin-bottom: 14px;
+}
+
+.resume-main .block h4::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.resume-main .block p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.resume-main .rjob {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.resume-main .rjob:first-child {
+  padding-top: 0;
+}
+
+.resume-main .rjob:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.resume-main .rjob h5 {
+  grid-column: 1;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.resume-main .rjob .rdate {
+  grid-column: 2;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  padding-top: 2px;
+  text-align: right;
+}
+
+.resume-main .rjob .rcompany {
+  grid-column: 1 / -1;
+  color: var(--orange);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.resume-main .rjob ul {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.resume-main .rjob ul li {
+  margin-bottom: 2px;
+}
+
+.resume-main .edu strong {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.resume-main .edu span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.resume-main .traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.resume-main .traits .trait {
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 10px;
+  font-weight: 700;
+  color: #c7cedb;
+}
+
+/* ============================================
+   PROJECTS
+   ============================================ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.projects-grid .project {
+  padding: 30px 28px;
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: default;
+}
+
+.projects-grid .project:hover {
+  transform: translateY(-8px) rotateX(2deg);
+  border-color: rgba(255, 118, 95, 0.2);
+}
+
+.projects-grid .project::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: -80px;
+  bottom: -80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 118, 95, 0.15), transparent 65%);
+  pointer-events: none;
+}
+
+.projects-grid .project small {
+  color: var(--orange);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.projects-grid .project h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  margin-top: 50px;
+  font-weight: 600;
+}
+
+.projects-grid .project p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 8px;
+}
+
+.projects-grid .project .arrow {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--orange);
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.projects-grid .project:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ============================================
+   CONTACT
+   ============================================ */
+.contact-card {
+  padding: 48px 52px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: -50px;
+  top: -50px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 118, 95, 0.08), transparent 60%);
+  pointer-events: none;
+}
+
+.contact-card h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(34px, 4.5vw, 58px);
+  letter-spacing: -3px;
+  line-height: 1;
+  margin: 12px 0 16px;
+}
+
+.contact-card h2 span {
+  color: var(--orange);
+}
+
+.contact-card p {
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 580px;
+  font-size: 13px;
+}
+
+.contact-card .buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 36px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 1.2px;
+}
+
+/* ============================================
+   LIGHTBOX
+   ============================================ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(3, 4, 7, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.lightbox.open {
+  display: flex;
+  animation: lb-fade 0.3s ease;
+}
+
+@keyframes lb-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lightbox img {
+  max-width: min(780px, 92vw);
+  max-height: 82vh;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.7);
+  animation: lb-zoom 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes lb-zoom {
+  from { transform: scale(0.92) translateY(12px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 28px;
+  right: max(28px, 4vw);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.lightbox .close:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ============================================
+   REVEAL ANIMATIONS
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.16s; }
+.reveal-delay-3 { transition-delay: 0.24s; }
+.reveal-delay-4 { transition-delay: 0.32s; }
+.reveal-delay-5 { transition-delay: 0.40s; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .hero-grid {
+    gap: 40px;
+  }
+
+  .hero-scene {
+    height: 520px;
+  }
+
+  .hero-scene .profile-card {
+    inset: 40px 30px 30px 40px;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .countries-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .resume-panel {
+    grid-template-columns: 1fr;
+    padding: 32px;
+  }
+
+  .resume-side {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .resume-side .photo {
+    width: 140px;
+    aspect-ratio: 3/4;
+  }
+
+  .resume-side .contact-list,
+  .resume-side .tags {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-scene {
+    max-width: 560px;
+    margin: 0 auto;
+    height: 480px;
+  }
+
+  .hero-scene .profile-card {
+    inset: 30px 20px 20px 30px;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    left: 18px;
+  }
+
+  .timeline .job {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding-left: 44px;
+  }
+
+  .timeline .job .date {
+    text-align: left;
+    padding: 0;
+  }
+
+  .timeline .job .job-card::before {
+    left: -34px;
+    top: 28px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 8px;
+    gap: 2px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: rgba(7, 9, 15, 0.98);
+    backdrop-filter: blur(24px);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px 16px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a.active::after {
+    display: none;
+  }
+
+  .nav-menu-btn {
+    display: block;
+  }
+
+  .contact-card {
+    grid-template-columns: 1fr;
+    padding: 32px;
+  }
+
+  .contact-card .buttons {
+    justify-content: flex-start;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .countries-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .resume-side {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .resume-side .photo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+    letter-spacing: -3px;
+  }
+
+  .hero-scene {
+    height: 380px;
+  }
+
+  .hero-scene .profile-card {
+    inset: 20px 12px 16px 20px;
+    border-radius: 24px;
+  }
+
+  .hero-scene .profile-card .overlay h2 {
+    font-size: 18px;
+  }
+
+  .hero-scene .float-card {
+    padding: 10px 14px;
+  }
+
+  .hero-scene .float-card b {
+    font-size: 11px;
+  }
+
+  .hero-scene .float-card--1 {
+    top: 10px;
+    left: -2px;
+  }
+  .hero-scene .float-card--2 {
+    bottom: 5px;
+    right: -2px;
+  }
+  .hero-scene .float-card--3 {
+    display: none;
+  }
+
+  .hero-meta {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta .meta-item b {
+    font-size: 18px;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-text {
+    padding: 24px;
+  }
+
+  .timeline .job .job-card {
+    padding: 20px 18px;
+  }
+
+  .timeline .job .job-card .job-photos .photo {
+    width: calc(50% - 6px);
+    height: 100px;
+  }
+
+  .timeline .job .job-card .job-photos .photo:only-child {
+    width: 100%;
+    height: 160px;
+  }
+
+  .countries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resume-panel {
+    padding: 20px;
+  }
+
+  .resume-main .rjob {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-main .rjob .rdate {
+    grid-column: 1;
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .lightbox {
+    padding: 16px;
+  }
+
+  .lightbox .close {
+    top: 16px;
+    right: 16px;
+  }
+
+  section {
+    padding: 70px 0;
+  }
+
+  .contact-card {
+    padding: 24px;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-scene .profile-card::before {
+    display: none;
+  }
+
+  .hero-scene .float-card {
+    animation: none;
+  }
+}
+
+/* ============================================
+   PRINT
+   ============================================ */
+@media print {
+  nav,
+  .bg-layer,
+  .cursor-glow,
+  .marquee,
+  footer,
+  .lightbox,
+  .hero-actions,
+  .resume-download {
+    display: none !important;
+  }
+
+  #home,
+  #about,
+  #experience,
+  #skills,
+  #international,
+  #projects,
+  #contact {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #111;
+  }
+
+  section {
+    padding: 0;
+  }
+
+  #resume {
+    padding-top: 20px;
+  }
+
+  #resume .section-eyebrow,
+  #resume .section-lead {
+    display: none !important;
+  }
+
+  #resume .section-title {
+    font-size: 28px;
+    color: #111;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  #resume .section-title span {
+    color: #c8502f;
+  }
+
+  .resume-panel {
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    padding: 0;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 32px;
+  }
+
+  .resume-side .name {
+    color: #111;
+  }
+
+  .resume-side .role {
+    color: #c8502f !important;
+  }
+
+  .resume-side .contact-list b {
+    color: #333;
+  }
+
+  .resume-side .tags .tag {
+    background: #f4f1ea;
+    border-color: #e4ddd0;
+    color: #333;
+  }
+
+  .resume-main .block h4 {
+    color: #555;
+  }
+
+  .resume-main .block h4::after {
+    background: #ddd;
+  }
+
+  .resume-main .block p {
+    color: #333;
+  }
+
+  .resume-main .rjob {
+    border-color: #e4ddd0;
+  }
+
+  .resume-main .rjob h5 {
+    color: #111;
+  }
+
+  .resume-main .rjob .rcompany {
+    color: #c8502f !important;
+  }
+
+  .resume-main .rjob ul {
+    color: #333;
+  }
+
+  .resume-main .edu strong {
+    color: #111;
+  }
+
+  .resume-main .edu span {
+    color: #555;
+  }
+
+  .resume-main .traits .trait {
+    background: #f4f1ea;
+    border-color: #e4ddd0;
+    color: #333;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline .job .job-card::before {
+    display: none;
+  }
+
+  .timeline .job .job-card {
+    border: 1px solid #e4ddd0;
+    background: #fff;
+    box-shadow: none;
+    padding: 16px 18px;
+    margin-bottom: 8px;
+  }
+
+  .timeline .job .job-card h3 {
+    color: #111;
+  }
+
+  .timeline .job .job-card .company {
+    color: #c8502f !important;
+  }
+
+  .timeline .job .job-card p {
+    color: #333;
+  }
+
+  .timeline .job .job-card .job-photos {
+    display: none;
+  }
+
+  .resume-side .photo {
+    border: 1px solid #ddd;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============================================
+   BACKGROUND
+   ============================================ -->
+<div class="bg-layer" aria-hidden="true">
+  <div class="gradient"></div>
+  <div class="grid"></div>
+  <div class="noise"></div>
+  <div class="blob blob--1"></div>
+  <div class="blob blob--2"></div>
+  <div class="blob blob--3"></div>
+</div>
+
+<!-- ============================================
+   CURSOR GLOW
+   ============================================ -->
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- ============================================
+   NAVIGATION
+   ============================================ -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <a class="logo" href="#home">JOSE <span>NATANAEL.</span></a>
+
+  <div class="nav-links" id="navLinks" role="menubar">
+    <a href="#home" role="menuitem" class="active">HOME</a>
+    <a href="#about" role="menuitem">ABOUT</a>
+    <a href="#experience" role="menuitem">EXPERIENCE</a>
+    <a href="#skills" role="menuitem">SKILLS</a>
+    <a href="#resume" role="menuitem">RESUME</a>
+    <a href="#projects" role="menuitem">PROJECTS</a>
+    <a href="#contact" role="menuitem">CONTACT</a>
+  </div>
+
+  <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+    <span id="menuIcon">☰</span>
+  </button>
+</nav>
+
+<main>
+
+<!-- ============================================
+   HERO
+   ============================================ -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div class="hero-content reveal">
+      <div class="badge">
+        <span class="dot"></span>
+        AVAILABLE FOR NEW OPPORTUNITIES
+      </div>
+
+      <h1>
+        JOSE<br>
+        <span class="line2">NATANAEL</span><br>
+        <span class="accent">NATAN.</span>
+      </h1>
+
+      <p class="sub">
+        Professional muda dengan pengalaman di bidang
+        <b>Tenant Relations, Property Operations, Foodcourt Management,
+        Administration, Customer Service, Sales</b> dan digital projects.
+        Dibentuk oleh pengalaman nyata, perjalanan lintas negara,
+        dan keberanian untuk terus berkembang.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#experience" class="btn btn-primary">
+          Explore My Journey →
+        </a>
+        <a href="cv-jose-natanael.pdf" class="btn" download>
+          Download CV ⬇
+        </a>
+        <a href="https://wa.me/628131401230" target="_blank" rel="noopener noreferrer" class="btn">
+          WhatsApp ↗
+        </a>
+      </div>
+
+      <div class="hero-meta">
+        <div class="meta-item">
+          <b>2019</b>
+          <span>Career Started</span>
+        </div>
+        <div class="meta-item">
+          <b>5+</b>
+          <span>Countries</span>
+        </div>
+        <div class="meta-item">
+          <b>∞</b>
+          <span>Growth Mindset</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scene reveal" id="heroScene">
+      <div class="orb orb--1"></div>
+      <div class="orb orb--2"></div>
+
+      <div class="profile-card" id="profileCard">
+        <img
+          src="images/hero-natan.jpg"
+          alt="Jose Natanael — professional portrait"
+          loading="eager"
+          onerror="this.style.display='none'"
+        >
+        <div class="overlay">
+          <small>Personal Brand</small>
+          <h2>BUILT BY EXPERIENCE.</h2>
+        </div>
+      </div>
+
+      <div class="float-card float-card--1">
+        <b>Tenant Relations</b>
+        <span>Property &amp; Building Ops</span>
+      </div>
+
+      <div class="float-card float-card--2">
+        <b>Indonesia → Asia</b>
+        <span>International Experience</span>
+      </div>
+
+      <div class="float-card float-card--3">
+        <b>Digital Projects</b>
+        <span>Web &amp; System Development</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================
+   MARQUEE
+   ============================================ -->
+<div class="marquee" style="overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;background:rgba(255,255,255,0.012);white-space:nowrap;" aria-hidden="true">
+  <div style="display:inline-flex;gap:32px;animation:moveMarquee 22s linear infinite;">
+    <span style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#7d8798;">JOSE NATANAEL</span>
+    <strong style="color:var(--orange);">✦</strong>
+    <span style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#7d8798;">TENANT RELATIONS</span>
+    <strong style="color:var(--orange);">✦</strong>
+    <span style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#7d8798;">PROPERTY OPERATIONS</span>
+    <strong style="color:var(--orange);">✦</strong>
+    <span style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#7d8798;">FOODCOURT MANAGEMENT</span>
+    <strong style="color:var(--orange);">✦</strong>
+    <span style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#7d8798;">DIGITAL PROJECTS</span>
+    <strong style="color:var(--orange);">✦</strong>
+    <span style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#7d8798;">CUSTOMER SERVICE</span>
+    <strong style="color:var(--orange);">✦</strong>
+    <span style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#7d8798;">SALES</span>
+    <strong style="color:var(--orange);">✦</strong>
+    <span style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#7d8798;">BUILT BY EXPERIENCE</span>
+    <strong style="color:var(--orange);">✦</strong>
+  </div>
+</div>
+
+<style>
+@keyframes moveMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
+
+<!-- ============================================
+   ABOUT
+   ============================================ -->
+<section id="about">
+  <div class="container">
+    <div class="section-eyebrow reveal">01 — Professional Story</div>
+    <h2 class="section-title reveal">
+      Bukan sekadar pengalaman kerja.<br>
+      Ini adalah <span>perjalanan.</span>
+    </h2>
+
+    <div class="about-grid">
+      <div class="about-text glass reveal">
+        <p>
+          <b>Nama saya Jose Natanael, biasa dipanggil Natan.</b>
+          Saya lahir di Jakarta, 12 Juli 2004 dan merupakan lulusan
+          SMK Kemala Bhayangkari 1 Jakarta Timur.
+        </p>
+        <p>
+          Saya mulai bekerja ketika masih bersekolah.
+          Pengalaman tersebut mengajarkan saya lebih awal tentang
+          tanggung jawab, disiplin waktu, kerja keras,
+          pelayanan dan pentingnya kemampuan beradaptasi.
+        </p>
+        <p>
+          Perjalanan saya membawa saya dari berbagai pekerjaan,
+          usaha pribadi hingga pengalaman bekerja di beberapa negara
+          Asia Tenggara. Setiap tempat memberikan perspektif baru
+          tentang manusia, bisnis dan cara bekerja.
+        </p>
+        <p>
+          Di Plaza BPJAMSOSTEK, selain Tenant Relations, saya juga
+          turut dipercaya membantu <b>pengelolaan area foodcourt</b>
+          dan koordinasi dengan tenant F&amp;B — memperluas pemahaman saya
+          tentang operasional retail dan pengalaman pengunjung.
+        </p>
+        <p>
+          Saya tidak ingin hanya dikenal dari pendidikan.
+          Saya ingin dikenal dari <b>kemauan belajar,
+          kemampuan beradaptasi dan keberanian mengambil tanggung jawab.</b>
+        </p>
+      </div>
+
+      <div class="about-stats-grid">
+        <div class="stat-card glass reveal reveal-delay-1">
+          <strong>22</strong>
+          <span>Years old with professional experience since school.</span>
+        </div>
+        <div class="stat-card glass reveal reveal-delay-2">
+          <strong>7+</strong>
+          <span>Years of work and entrepreneurial experience.</span>
+        </div>
+        <div class="stat-card glass reveal reveal-delay-3">
+          <strong>5+</strong>
+          <span>Countries connected through work and life.</span>
+        </div>
+        <div class="stat-card glass reveal reveal-delay-4">
+          <strong>∞</strong>
+          <span>Ambition to keep learning, building and improving.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-gallery">
+      <div class="gallery-item reveal" data-lightbox>
+        <img
+          src="images/about-school.jpg"
+          alt="SMK Kemala Bhayangkari 1, Jakarta Timur"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        >
+        <div class="overlay">
+          <small>Titik Awal</small>
+          <span>SMK Kemala Bhayangkari 1, Jakarta Timur</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" data-lightbox>
+        <img
+          src="images/exp-international-team.jpg"
+          alt="Membangun relasi lintas budaya"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        >
+        <div class="overlay">
+          <small>Koneksi</small>
+          <span>Membangun relasi lintas budaya</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-lightbox>
+        <img
+          src="images/gallery-casual.jpg"
+          alt="Jose Natanael, selalu siap bergerak"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        >
+        <div class="overlay">
+          <small>Sehari-hari</small>
+          <span>Selalu siap bergerak &amp; belajar hal baru</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+   EXPERIENCE
+   ============================================ -->
+<section id="experience">
+  <div class="container">
+    <div class="section-eyebrow reveal">02 — Career Timeline</div>
+    <h2 class="section-title reveal">
+      Every experience built<br>
+      the <span>next version of me.</span>
+    </h2>
+    <p class="section-lead reveal">
+      Perjalanan karier saya tidak selalu lurus.
+      Namun setiap pekerjaan memberikan kemampuan baru:
+      disiplin, pelayanan, komunikasi, negosiasi,
+      operasional dan leadership.
+    </p>
+
+    <div class="timeline">
+
+      <div class="job reveal">
+        <div class="date">FEB–DES 2026</div>
+        <div class="job-card glass">
+          <h3>Tenant Relations &amp; Foodcourt Coordination</h3>
+          <div class="company">PLAZA BPJAMSOSTEK • JAKARTA SELATAN</div>
+          <p>
+            Bekerja dalam fungsi Tenant Relations melalui PT Bijak.
+            Mendukung komunikasi dengan tenant, kebutuhan administrasi,
+            koordinasi operasional, monitoring area dan kelancaran
+            aktivitas tenant di lingkungan gedung. Selain itu, turut
+            dipercaya membantu <b>pengelolaan area foodcourt</b> serta
+            koordinasi dengan tenant F&amp;B agar operasional area makan
+            pengunjung tetap tertib, bersih dan nyaman.
+          </p>
+          <div class="job-photos">
+            <div class="photo" data-lightbox>
+              <img
+                src="images/exp-tenant-relations.jpg"
+                alt="Koordinasi tenant di Plaza BPJAMSOSTEK"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              >
+              <span class="tag">DI LOKASI</span>
+            </div>
+            <div class="photo" data-lightbox>
+              <img
+                src="images/exp-foodcourt.jpg"
+                alt="Koordinasi area foodcourt &amp; tenant F&B"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              >
+              <span class="tag">FOODCOURT AREA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="job reveal">
+        <div class="date">2025–NOW</div>
+        <div class="job-card glass">
+          <h3>Mengelola Biro Jasa Keluarga</h3>
+          <div class="company">WIRASWASTA • JAKARTA</div>
+          <p>
+            Melanjutkan usaha keluarga di bidang jasa administrasi kendaraan.
+            Bertanggung jawab terhadap komunikasi pelanggan,
+            dokumen, kebutuhan administrasi dan menjaga kepercayaan pelanggan.
+          </p>
+        </div>
+      </div>
+
+      <div class="job reveal">
+        <div class="date">2025</div>
+        <div class="job-card glass">
+          <h3>Helper Gudang &amp; Operasional Logistik</h3>
+          <div class="company">CAKUNG • JAKARTA TIMUR</div>
+          <p>
+            Mendukung kegiatan operasional gudang dan penanganan barang
+            dalam ritme kerja cepat. Membentuk ketelitian, ketahanan kerja
+            dan kemampuan mengikuti prosedur operasional.
+          </p>
+        </div>
+      </div>
+
+      <div class="job reveal">
+        <div class="date">2023–2025</div>
+        <div class="job-card glass">
+          <h3>Property Operations Experience</h3>
+          <div class="company">PHILIPPINES • THAILAND • CAMBODIA</div>
+          <p>
+            Terlibat dalam kegiatan yang berkaitan dengan pengelolaan
+            operasional dan penyewaan properti/gedung.
+            Pengalaman lintas negara membentuk kemampuan adaptasi,
+            koordinasi dan komunikasi dengan berbagai pihak.
+          </p>
+          <div class="job-photos">
+            <div class="photo" data-lightbox>
+              <img
+                src="images/exp-cambodia.jpg"
+                alt="Pengalaman di Cambodia"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              >
+              <span class="tag">CAMBODIA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="job reveal">
+        <div class="date">2022–2023</div>
+        <div class="job-card glass">
+          <h3>International Work Experience</h3>
+          <div class="company">MALAYSIA</div>
+          <p>
+            Memulai kehidupan dan pengalaman kerja di Malaysia.
+            Tinggal jauh dari rumah membentuk kemandirian,
+            keberanian beradaptasi dan disiplin.
+          </p>
+        </div>
+      </div>
+
+      <div class="job reveal">
+        <div class="date">2021–2022</div>
+        <div class="job-card glass">
+          <h3>Founder — Es Alpukat Kocok</h3>
+          <div class="company">CIPINANG • JAKARTA TIMUR</div>
+          <p>
+            Mengelola usaha sendiri dari operasional,
+            pelayanan pelanggan, persediaan dan kebutuhan harian.
+            Pengalaman ini membangun jiwa kewirausahaan.
+          </p>
+        </div>
+      </div>
+
+      <div class="job reveal">
+        <div class="date">2020–2021</div>
+        <div class="job-card glass">
+          <h3>Sales &amp; Product Negotiation</h3>
+          <div class="company">ONLINE SHOP WAREHOUSE • CENGKARENG</div>
+          <p>
+            Menangani komunikasi dan negosiasi produk,
+            memahami kebutuhan pelanggan dan mendukung
+            aktivitas penjualan.
+          </p>
+        </div>
+      </div>
+
+      <div class="job reveal">
+        <div class="date">2020</div>
+        <div class="job-card glass">
+          <h3>Monitoring &amp; Area Maintenance</h3>
+          <div class="company">KAWASAN INDUSTRI PULOGADUNG</div>
+          <p>
+            Melakukan pengecekan rutin kondisi gudang,
+            kebersihan area, potensi kebocoran dan kondisi
+            area luar properti.
+          </p>
+        </div>
+      </div>
+
+      <div class="job reveal">
+        <div class="date">2019–2020</div>
+        <div class="job-card glass">
+          <h3>First Professional Responsibility</h3>
+          <div class="company">TOKO DAGING • JAKARTA</div>
+          <p>
+            Ketika masih SMP, saya bekerja setelah pulang sekolah.
+            Pengalaman pertama inilah yang menjadi fondasi karakter:
+            menghargai waktu, bertanggung jawab dan tidak mudah menyerah.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+   SKILLS
+   ============================================ -->
+<section id="skills">
+  <div class="container">
+    <div class="section-eyebrow reveal">03 — Professional Strengths</div>
+    <h2 class="section-title reveal">
+      Skills built through <span>real experience.</span>
+    </h2>
+
+    <div class="skills-grid">
+      <div class="skill glass reveal reveal-delay-1">
+        <div class="number">01 / RELATIONS</div>
+        <h3>Tenant Relations</h3>
+        <p>Komunikasi, koordinasi kebutuhan tenant dan membangun hubungan profesional.</p>
+      </div>
+
+      <div class="skill glass reveal reveal-delay-2">
+        <div class="number">02 / PROPERTY</div>
+        <h3>Property Operations</h3>
+        <p>Monitoring area, kondisi properti dan dukungan kegiatan operasional gedung.</p>
+      </div>
+
+      <div class="skill glass reveal reveal-delay-3">
+        <div class="number">03 / ADMIN</div>
+        <h3>Administration</h3>
+        <p>Pengelolaan dokumen, administrasi dan ketelitian terhadap proses kerja.</p>
+      </div>
+
+      <div class="skill glass reveal reveal-delay-1">
+        <div class="number">04 / COMMUNICATION</div>
+        <h3>Communication</h3>
+        <p>Terbiasa berinteraksi dengan tenant, customer dan berbagai pihak.</p>
+      </div>
+
+      <div class="skill glass reveal reveal-delay-2">
+        <div class="number">05 / SERVICE</div>
+        <h3>Customer Service</h3>
+        <p>Memahami kebutuhan pelanggan, pelayanan dan membangun kepercayaan.</p>
+      </div>
+
+      <div class="skill glass reveal reveal-delay-3">
+        <div class="number">06 / DIGITAL</div>
+        <h3>Digital Projects</h3>
+        <p>Memiliki minat dalam website, sistem digital dan automation.</p>
+      </div>
+
+      <div class="skill glass reveal reveal-delay-4" style="grid-column: 1 / -1; max-width: 500px; margin: 0 auto;">
+        <div class="number">07 / F&amp;B AREA</div>
+        <h3>Foodcourt Management</h3>
+        <p>
+          Turut mengelola operasional foodcourt, koordinasi tenant F&amp;B
+          dan kenyamanan area makan pengunjung.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+   INTERNATIONAL
+   ============================================ -->
+<section id="international">
+  <div class="container">
+    <div class="section-eyebrow reveal">04 — International Exposure</div>
+    <h2 class="section-title reveal">
+      Different places.<br>
+      <span>Different perspectives.</span>
+    </h2>
+
+    <div class="countries-grid">
+      <div class="country glass reveal reveal-delay-1">
+        <span class="flag">🇮🇩</span>
+        <b>Indonesia</b>
+        <span>Home &amp; Career Foundation</span>
+      </div>
+      <div class="country glass reveal reveal-delay-2">
+        <span class="flag">🇲🇾</span>
+        <b>Malaysia</b>
+        <span>Work &amp; Independent Living</span>
+      </div>
+      <div class="country glass reveal reveal-delay-3">
+        <span class="flag">🇵🇭</span>
+        <b>Philippines</b>
+        <span>Property Experience</span>
+      </div>
+      <div class="country glass reveal reveal-delay-4">
+        <span class="flag">🇹🇭</span>
+        <b>Thailand</b>
+        <span>Property Experience</span>
+      </div>
+      <div class="country glass reveal reveal-delay-5">
+        <span class="flag">🇰🇭</span>
+        <b>Cambodia</b>
+        <span>Property Experience</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+   RESUME
+   ============================================ -->
+<section id="resume">
+  <div class="container">
+    <div class="section-eyebrow reveal">05 — Resume At A Glance</div>
+    <h2 class="section-title reveal">
+      Everything HRD needs,<br>
+      <span>on one page.</span>
+    </h2>
+    <p class="section-lead reveal">
+      Versi ringkas dari seluruh perjalanan karier saya —
+      siap dibaca cepat di sini, atau diunduh untuk
+      lampiran lamaran kerja.
+    </p>
+
+    <div class="resume-download reveal">
+      <a href="cv-jose-natanael.pdf" class="btn btn-primary" download>
+        ⬇ Download CV (PDF)
+      </a>
+      <a href="cv-jose-natanael.docx" class="btn" download>
+        Download CV (Word)
+      </a>
+    </div>
+
+    <div class="resume-panel glass reveal">
+      <div class="resume-side">
+        <div class="photo" data-lightbox>
+          <img
+            src="images/hero-natan.jpg"
+            alt="Jose Natanael"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          >
+        </div>
+
+        <div>
+          <div class="name">Jose Natanael</div>
+          <div class="role">Tenant Relations &amp; Property Operations</div>
+        </div>
+
+        <div class="contact-list">
+          <div><span>📍</span><b>Jakarta Timur, DKI Jakarta</b></div>
+          <a href="mailto:p18024703@gmail.com"><span>✉️</span><b>p18024703@gmail.com</b></a>
+          <a href="https://wa.me/628131401230" target="_blank" rel="noopener noreferrer"><span>📱</span><b>+62 813-1401-230</b></a>
+          <a href="https://instagram.com/hein4th_" target="_blank" rel="noopener noreferrer"><span>📷</span><b>@hein4th_</b></a>
+        </div>
+
+        <div class="tags">
+          <span class="tag">Tenant Relations</span>
+          <span class="tag">Property Operations</span>
+          <span class="tag">Foodcourt &amp; F&amp;B</span>
+          <span class="tag">Administration</span>
+          <span class="tag">Customer Service</span>
+          <span class="tag">Negotiation</span>
+        </div>
+      </div>
+
+      <div class="resume-main">
+        <div class="block">
+          <h4>Profil</h4>
+          <p>
+            Professional muda kelahiran Jakarta, 12 Juli 2004, lulusan SMK
+            Kemala Bhayangkari 1 Jakarta Timur. Berpengalaman di Tenant
+            Relations dan Property &amp; Building Operations — termasuk
+            pengelolaan area foodcourt dan koordinasi tenant F&amp;B —
+            administrasi, penjualan, serta operasional lintas negara di
+            Asia Tenggara. Dikenal rajin, disiplin waktu, dan cepat
+            beradaptasi dengan lingkungan kerja baru.
+          </p>
+        </div>
+
+        <div class="block">
+          <h4>Pengalaman Kerja</h4>
+
+          <div class="rjob">
+            <h5>Tenant Relations &amp; Foodcourt Coordination</h5>
+            <div class="rdate">FEB – DES 2026</div>
+            <div class="rcompany">PLAZA BPJAMSOSTEK, JAKARTA SELATAN — VIA PT BIJAK</div>
+            <ul>
+              <li>Menjalin komunikasi dan hubungan yang baik dengan tenant gedung.</li>
+              <li>Turut membantu pengelolaan area foodcourt dan koordinasi dengan tenant F&amp;B.</li>
+              <li>Menangani administrasi, monitoring area, serta kebutuhan tenant.</li>
+            </ul>
+          </div>
+
+          <div class="rjob">
+            <h5>Pemilik Usaha — Biro Jasa Administrasi Kendaraan</h5>
+            <div class="rdate">2025 – SEKARANG</div>
+            <div class="rcompany">WIRASWASTA, JAKARTA</div>
+            <ul>
+              <li>Melanjutkan usaha keluarga: pelayanan pelanggan, dokumen dan administrasi kendaraan.</li>
+            </ul>
+          </div>
+
+          <div class="rjob">
+            <h5>Property Operations — Asia Tenggara</h5>
+            <div class="rdate">2022 – 2025</div>
+            <div class="rcompany">MALAYSIA • PHILIPPINES • THAILAND • CAMBODIA</div>
+            <ul>
+              <li>Mendukung operasional dan penyewaan properti/gedung lintas negara.</li>
+              <li>Helper gudang Shopee Cakung (2025, 3 bulan) — logistik dan distribusi.</li>
+            </ul>
+          </div>
+
+          <div class="rjob">
+            <h5>Pengalaman Awal &amp; Kewirausahaan</h5>
+            <div class="rdate">2019 – 2022</div>
+            <div class="rcompany">JAKARTA</div>
+            <ul>
+              <li>Staff penjualan produk online shop, founder usaha Es Alpukat Kocok,
+              pengawasan area gudang Kawasan Industri Pulogadung, dan pekerja
+              toko daging sejak masih bersekolah.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="block">
+          <h4>Pendidikan</h4>
+          <div class="edu">
+            <strong>SMK Kemala Bhayangkari 1</strong>
+            <span>Jakarta Timur — Sekolah Menengah Kejuruan (SMK)</span>
+          </div>
+        </div>
+
+        <div class="block">
+          <h4>Karakter</h4>
+          <div class="traits">
+            <span class="trait">Rajin</span>
+            <span class="trait">Disiplin Waktu</span>
+            <span class="trait">Pekerja Keras</span>
+            <span class="trait">Mandiri</span>
+            <span class="trait">Cepat Beradaptasi</span>
+            <span class="trait">Bertanggung Jawab</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+   PROJECTS
+   ============================================ -->
+<section id="projects">
+  <div class="container">
+    <div class="section-eyebrow reveal">06 — Portfolio &amp; Initiatives</div>
+    <h2 class="section-title reveal">
+      I don't only work.<br>
+      I also <span>build.</span>
+    </h2>
+
+    <div class="projects-grid">
+      <div class="project glass reveal reveal-delay-1">
+        <small>Property / Digital</small>
+        <h3>Plaza BPJAMSOSTEK Website</h3>
+        <p>
+          Konsep digital untuk menampilkan informasi gedung,
+          fasilitas, tenant dan kebutuhan pengunjung secara modern.
+        </p>
+        <span class="arrow">→</span>
+      </div>
+
+      <div class="project glass reveal reveal-delay-2">
+        <small>Foodcourt / System</small>
+        <h3>Foodcourt Online System</h3>
+        <p>
+          Konsep sistem pemesanan, informasi menu, tenant dan
+          pengalaman digital pelanggan.
+        </p>
+        <span class="arrow">→</span>
+      </div>
+
+      <div class="project glass reveal reveal-delay-3">
+        <small>Operations / Management</small>
+        <h3>Tenant Management System</h3>
+        <p>
+          Konsep panel digital untuk membantu pengelolaan tenant,
+          menu, laporan, komunikasi dan operasional.
+        </p>
+        <span class="arrow">→</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+   CONTACT
+   ============================================ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-card glass reveal">
+      <div>
+        <div class="section-eyebrow">07 — Let's Connect</div>
+        <h2>
+          Ready for the<br>
+          <span>next chapter.</span>
+        </h2>
+        <p>
+          Terbuka untuk peluang di bidang Tenant Relations,
+          Property Management, Building Operations,
+          Administration, Customer Service, Sales
+          dan posisi operasional lainnya.
+        </p>
+      </div>
+
+      <div class="buttons">
+        <a href="cv-jose-natanael.pdf" class="btn" download>
+          Download CV ⬇
+        </a>
+        <a href="https://wa.me/628131401230" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          WhatsApp ↗
+        </a>
+        <a href="mailto:p18024703@gmail.com" class="btn">
+          Email
+        </a>
+        <a href="https://instagram.com/hein4th_" target="_blank" rel="noopener noreferrer" class="btn">
+          Instagram ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================
+   FOOTER
+   ============================================ -->
+<footer>
+  © 2026 JOSE NATANAEL — BUILT BY EXPERIENCE.
+</footer>
+
+<!-- ============================================
+   LIGHTBOX
+   ============================================ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer" aria-modal="true">
+  <button class="close" id="lightboxClose" aria-label="Close lightbox">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- ============================================
+   SCRIPTS
+   ============================================ -->
+<script>
+// ============================================
+// REVEAL ON SCROLL
+// ============================================
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  },
+  { threshold: 0.1, rootMargin: '0px 0px -20px 0px' }
+);
+
+document.querySelectorAll('.reveal').forEach((el) => {
+  revealObserver.observe(el);
+});
+
+// ============================================
+// NAV SCROLL & ACTIVE INDICATOR
+// ============================================
+const navbar = document.getElementById('navbar');
+const navLinks = document.querySelectorAll('.nav-links a');
+const sections = document.querySelectorAll('section[id]');
+
+window.addEventListener('scroll', () => {
+  // Nav background
+  if (window.scrollY > 40) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+
+  // Active nav link
+  let current = '';
+  sections.forEach((section) => {
+    const top = section.offsetTop - 120;
+    if (window.scrollY >= top) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// ============================================
+// MOBILE MENU
+// ============================================
+const menuBtn = document.getElementById('menuBtn');
+const navLinksEl = document.getElementById('navLinks');
+const menuIcon = document.getElementById('menuIcon');
+
+menuBtn.addEventListener('click', () => {
+  const isOpen = navLinksEl.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', isOpen);
+  menuIcon.textContent = isOpen ? '✕' : '☰';
+});
+
+navLinksEl.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    navLinksEl.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuIcon.textContent = '☰';
+  });
+});
+
+// ============================================
+// CURSOR GLOW
+// ============================================
+const cursorGlow = document.getElementById('cursorGlow');
+
+if (window.matchMedia('(pointer: fine)').matches) {
+  let mouseX = 0,
+    mouseY = 0;
+  let glowX = 0,
+    glowY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animateCursor() {
+    glowX += (mouseX - glowX) * 0.08;
+    glowY += (mouseY - glowY) * 0.08;
+    cursorGlow.style.left = glowX + 'px';
+    cursorGlow.style.top = glowY + 'px';
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  // Hover effect on interactive elements
+  document.querySelectorAll('a, button, .btn, .gallery-item, .photo, [data-lightbox]').forEach((el) => {
+    el.addEventListener('mouseenter', () => cursorGlow.classList.add('hover'));
+    el.addEventListener('mouseleave', () => cursorGlow.classList.remove('hover'));
+  });
+}
+
+// ============================================
+// 3D HERO PROFILE
+// ============================================
+const heroScene = document.getElementById('heroScene');
+const profileCard = document.getElementById('profileCard');
+
+if (window.matchMedia('(pointer: fine)').matches && heroScene) {
+  let rotX = 4,
+    rotY = -8;
+
+  heroScene.addEventListener('mousemove', (e) => {
+    const rect = heroScene.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+    const targetRotY = -8 + x * 14;
+    const targetRotX = 4 - y * 12;
+
+    rotX += (targetRotX - rotX) * 0.08;
+    rotY += (targetRotY - rotY) * 0.08;
+
+    profileCard.style.transform =
+      `rotateY(${rotY}deg) rotateX(${rotX}deg)`;
+  });
+
+  heroScene.addEventListener('mouseleave', () => {
+    rotX += (4 - rotX) * 0.06;
+    rotY += (-8 - rotY) * 0.06;
+    profileCard.style.transform =
+      `rotateY(${rotY}deg) rotateX(${rotX}deg)`;
+  });
+}
+
+// ============================================
+// 3D TILT ON CARDS (desktop only)
+// ============================================
+if (window.matchMedia('(pointer: fine)').matches) {
+  document.querySelectorAll('.skill, .project, .stat-card, .gallery-item, .photo').forEach((el) => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      el.style.transform =
+        `perspective(800px) rotateX(${-y * 4}deg) rotateY(${x * 4}deg) translateY(-4px)`;
+    });
+
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = '';
+    });
+  });
+}
+
+// ============================================
+// LIGHTBOX
+// ============================================
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+
+function openLightbox(src, alt) {
+  lightboxImg.src = src;
+  lightboxImg.alt = alt || '';
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('[data-lightbox]').forEach((el) => {
+  el.addEventListener('click', () => {
+    const img = el.querySelector('img');
+    if (img) {
+      openLightbox(img.currentSrc || img.src, img.alt);
+    }
+  });
+});
+
+lightboxClose.addEventListener('click', closeLightbox);
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeLightbox();
+});
+
+// ============================================
+// REDUCED MOTION
+// ============================================
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (prefersReducedMotion.matches) {
+  document.querySelectorAll('.reveal').forEach((el) => {
+    el.classList.add('show');
+  });
+}
+
+// Log
+console.log('🚀 Jose Natanael — Built By Experience');
+</script>
+</body>
+</html>
